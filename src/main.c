@@ -194,11 +194,14 @@ loop(void *arg)
 {
     SDL_Event event;
     int i;
-    float gx, gy, gz;
-    float ax, ay, az;
+    float gx = 0.0f;
+    float gy = 0.0f;
+    float gz = 0.0f;
+    float ax = 0.0f;
+    float ay = 0.0f;
+    float az = 0.0f;
 
     while (SDL_PollEvent(&event)) {
-    
         switch (event.type) {
         case SDL_CONTROLLERDEVICEADDED:
             //SDL_Log("Game controller device %d added.\n", (int) SDL_JoystickGetDeviceInstanceID(event.cdevice.which));
