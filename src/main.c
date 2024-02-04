@@ -189,17 +189,18 @@ static Uint16 ConvertAxisToRumble(Sint16 axis)
     }
 }
 
+static float gx = 0.0f;
+static float gy = 0.0f;
+static float gz = 0.0f;
+static float ax = 0.0f;
+static float ay = 0.0f;
+static float az = 0.0f;
+
 void
 loop(void *arg)
 {
     SDL_Event event;
     int i;
-    float gx = 0.0f;
-    float gy = 0.0f;
-    float gz = 0.0f;
-    float ax = 0.0f;
-    float ay = 0.0f;
-    float az = 0.0f;
 
     while (SDL_PollEvent(&event)) {
         switch (event.type) {
